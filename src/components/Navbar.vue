@@ -6,7 +6,7 @@
                 :style="{ height: this.height + 'vh', transition: this.trans }"
             >
                 <ul id="menu-icon"
-                    :style="{ height: this.menuHeight + 'px', marginTop: 'calc(0.5 * calc(15vh - ' + this.menuHeight + 'px))' }"
+                    :style="{ height: this.menuHeight + 'px' }"
                 >
                     <div class="icon-bar"></div>
                     <div class="icon-bar"></div>

@@ -12,7 +12,7 @@
         <router-link class="card sketchy" v-if="displayNum == 2" to="/disp/app/weather">
             <img :src="require('./../assets/weather-img.jpg')"/>
             <h1>Locational Weather App</h1>
-            <p>I first start this project to learn the VueJs framework, which I then also used to construct
+            <p>I first started this project to learn the VueJs framework, which I then also used to construct
                 the site you're interacting with right now! The web app features geolocational searching services
                 and live weather, temperature, and date updates through the use of the OpenWeather API, as well as
                 background that changes from warm to cold depending on the temperature at the selected location.
