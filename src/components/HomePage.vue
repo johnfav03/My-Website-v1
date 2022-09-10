@@ -7,7 +7,7 @@
                 <p>I've always been a builder at heart - I love planning and creating, 
                     anywhere from web projects to arduino robots to something as simple as
                     light-up birthday cards. At the moment, I'm a full time student working
-                    on a project called <router-link class="tx-green" to="/currentrail">
+                    on a project called <router-link class="tx-green" to="/currentrail" target="_blank">
                     Currentrail</router-link>. If you'd like to check out some of my favorite
                     projects, feel free to scroll through the menu on the right hand side!
                 </p>
