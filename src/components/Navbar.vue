@@ -1,0 +1,132 @@
+<template>
+    <div id="navbar">
+        <div class="rel-wrap">
+            <div id="menu-bar"
+                @click="toggleMenu"
+                :style="{ height: this.height + 'vh', transition: this.trans }"
+            >
+                <ul id="menu-icon"
+                    :style="{ height: this.menuHeight + 'px', marginTop: 'calc(0.5 * calc(15vh - ' + this.menuHeight + 'px))' }"
+                >
+                    <div class="icon-bar"></div>
+                    <div class="icon-bar"></div>
+                    <div class="icon-bar"></div>
+                </ul>
+                <ul id="nav-list" :style="{ display: this.elemDisp, left: this.elemLeft, transition: this.trans }">
+                    <li><router-link to="/">About Me</router-link></li>
+                    <li><router-link to="/projects/0/1">Web Projects</router-link></li>
+                    <li><router-link to="/projects/2/3">Arduino Projects</router-link></li>
+                    <li><router-link to="/projects/4/5">Older Projects</router-link></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </template>
+  
+  <script>
+    export default {
+        name: 'Navbar',
+        data() {
+            return {
+                height: 15,
+                menuHeight: 30,
+                trans: 'none',
+                elemDisp: 'none',
+                elemLeft: '40vw'
+            }
+        },
+        methods: {
+            toggleMenu () {
+                this.trans = '0.7s';
+                this.elemDisp = (this.elemDisp == 'none' ? 'flex' : 'none');
+                this.height = (this.height == 15 ? 50 : 15);
+                this.menuHeight = (this.menuHeight == 30 ? 40 : 30);
+                setTimeout(() => this.elemLeft = (this.elemLeft == '40vw' ? '135px' : '40vw'), 50);
+                setTimeout(() => this.trans = 'none', 700);
+            }
+        },
+    }
+  </script>
+  
+  <style scoped>
+    @import url('https://fonts.googleapis.com/css?family=Oswald:wght@300;400;700&display=swap');
+
+    #navbar {
+        position: fixed;
+        display: block;
+        right: 0;
+        top: 0;
+        width: 20vw;
+        min-width: 300px;
+        height: 100vh;
+        background-color: #406040;
+
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #menu-icon:hover {
+        cursor: pointer;
+    }
+    .rel-wrap {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    #menu-bar {
+        position: absolute;
+        display: block;
+        top: 22vh;
+        left: -50px;
+        width: 100px;
+        height: 15vh;
+        background-color: #dd7722;
+    }
+    #menu-icon {
+        width: 40px;
+        height: 30px;
+        margin: auto;
+        margin-top: calc(0.5 * calc(15vh - 30px));
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.7s;
+        pointer-events: auto;
+    }
+    #menu-icon .icon-bar {
+        pointer-events: none;
+        width: 100%;
+        height: 6px;
+        background-color: white;
+        display: block;
+    }
+    #nav-list {
+        height: 30vh;
+        width: 230px;
+        text-align: left;
+        position: absolute;
+        top: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 2;
+    }
+    #nav-list li {
+        list-style-type: none;
+    }
+    #nav-list li a {
+        list-style-type: none;
+        font-size: 30px;
+        z-index: -1;
+        color: #f5f5ea !important;
+        text-decoration: none;
+    }
+    #nav-list li a:hover {
+        color: #b8b8b2;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        #navbar {
+            display: none !important;
+        }
+    }
+  </style>
