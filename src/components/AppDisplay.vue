@@ -1,6 +1,6 @@
 <template>
     <div id="display">
-        <Navbar />
+        <Navbar link="/projects/0/1"/>
         <div class="grid-wrap">
             <div class="display-grid">
                 <div class="tape top-left"></div>

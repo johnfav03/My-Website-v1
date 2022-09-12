@@ -1,25 +1,28 @@
 <template>
     <div id="gallery">
-        <Navbar />
         <div class="grid-wrap">
             <div class="gallery-grid">
                 <div class="tape top-left"></div>
                 <div class="tape bot-right"></div>
                 <div class="img-box" v-if="$route.params.elem=='egclub'">
+                    <Navbar link="/projects/2/3" />
                     <img class="img-40 sketchy" :src="require('./../assets/egclub-code.png')" />
                     <img class="img-50 sketchy" :src="require('./../assets/egclub-robot-two.png')" />
                 </div>
                 <div class="img-box" v-if="$route.params.elem=='photobot'">
+                    <Navbar link="/projects/2/3" />
                     <video class="img-60 sketchy" loop autoplay muted>
                         <source :src="require('./../assets/photobot-mp4.mp4')" type="video/mp4">
                     </video>
                 </div>
                 <div class="img-box" v-if="$route.params.elem=='operation'">
+                    <Navbar link="/projects/4/5" />
                     <video class="img-60 sketchy" loop autoplay controls>
                         <source :src="require('./../assets/operation-mp4.mp4')" type="video/mp4">
                     </video>
                 </div>
                 <div class="img-box" v-if="$route.params.elem=='cbarm'">
+                    <Navbar link="/projects/4/5" />
                     <video class="img-60 sketchy" loop autoplay muted>
                         <source :src="require('./../assets/cbarm-mp4.mp4')" type="video/mp4">
                     </video>

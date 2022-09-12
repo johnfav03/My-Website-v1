@@ -1,7 +1,10 @@
 <template>
     <div id="navbar">
         <div class="rel-wrap">
-            <div id="menu-bar"
+            <router-link style="text-decoration: none;" class="nav-btn top-16" v-if="link != ''" :to="link">
+                <div class="icon-wrap">&#8592</div>
+            </router-link>
+            <div class="nav-btn top-35"
                 @click="toggleMenu"
                 :style="{ height: this.height + 'vh', transition: this.trans }"
             >
@@ -26,6 +29,9 @@
   <script>
     export default {
         name: 'Navbar',
+        props: [
+            'link'
+        ],
         data() {
             return {
                 height: 15,
@@ -49,7 +55,7 @@
   </script>
   
   <style scoped>
-    @import url('https://fonts.googleapis.com/css?family=Oswald:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Oswald:wght@300;400;700;900&display=swap');
 
     #navbar {
         position: fixed;
@@ -72,7 +78,7 @@
         height: 100%;
         width: 100%;
     }
-    #menu-bar {
+    .nav-btn {
         position: absolute;
         display: block;
         top: 22vh;
@@ -80,6 +86,12 @@
         width: 100px;
         height: 15vh;
         background-color: #dd7722;
+    }
+    .top-16 {
+        top: 16vh;
+    }
+    .top-35 {
+        top: 35vh;
     }
     #menu-icon {
         width: 40px;
@@ -123,10 +135,20 @@
     #nav-list li a:hover {
         color: #b8b8b2;
     }
-
     @media only screen and (max-width: 1000px) {
         #navbar {
             display: none !important;
         }
+    }
+    .icon-wrap {
+        width: 100%;
+        height: 15vh;
+        position: relative;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        line-height: 12.5vh;
+        font-weight: 900;
     }
   </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="proj-main">
-        <Navbar/>
+        <Navbar link="/"/>
         <div class="card-box">
             <span class="card-flex">
                 <ProjCard v-for="(x, i) in (this.$route.params.end - this.$route.params.beg + 1)" :display-num="x + Number($route.params.beg)" :key="i"/>
