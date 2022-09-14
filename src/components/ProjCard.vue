@@ -13,12 +13,21 @@
             <img :src="require('./../assets/weather-img.jpg')"/>
             <h1>Locational Weather App</h1>
             <p>I first started this project to learn the VueJs framework, which I then also used to construct
-                the site you're interacting with right now! The web app features geolocational searching services
-                and live weather, temperature, and date updates through the use of the OpenWeather API, as well as
+                the site you're on right now! The web app features geolocational search services
+                and live weather, and temperature updates through the use of the OpenWeather API, as well as
                 background that changes from warm to cold depending on the temperature at the selected location.
             </p>
         </router-link>
-        <router-link class="card sketchy" v-if="displayNum == 3" to="/disp/gal/egclub">
+        <router-link class="card sketchy" v-if="displayNum == 3" to="/dropzone" target="_blank">
+            <img :src="require('./../assets/dropzone-img.jpg')"/>
+            <h1>Image Dropzone App</h1>
+            <p>I took on this project to get a better grasp on back-end development - the application
+                takes in images using the Dropzone.js library, then sends them to a back-end directory, where
+                they're stored. On the next page, the images are retrieved and displayed in a gallery until
+                cleared. The application is built in Python and HTML/CSS, and makes use of the Django framework.
+            </p>
+        </router-link>
+        <router-link class="card sketchy" v-if="displayNum == 4" to="/disp/gal/egclub">
             <img :src="require('./../assets/egclub-robot-one.png')"/>
             <h1>Engineering Club</h1>
             <p>In high school I started a club with a close friend to teach Arduino microprocessors, 
@@ -27,7 +36,7 @@
                 I led the programming team, teaching a dozen members C++ and spearheading robot autonomy.
             </p>
         </router-link>
-        <router-link class="card sketchy" v-if="displayNum == 4" to="/disp/gal/photobot">
+        <router-link class="card sketchy" v-if="displayNum == 5" to="/disp/gal/photobot">
             <img :src="require('./../assets/photobot-img.jpg')"/>
             <h1>Light-Tracking Robot</h1>
             <p>One of my favorite projects - with an Arduino Micro, I used a stepper motor and motor driver
@@ -36,7 +45,7 @@
                 stepper motor, which made for a challenge trying to wire across layers!
             </p>
         </router-link>
-        <router-link class="card sketchy" v-if="displayNum == 5" to="/disp/gal/operation">
+        <router-link class="card sketchy" v-if="displayNum == 6" to="/disp/gal/operation">
             <img :src="require('./../assets/operation-img.jpg')"/>
             <h1>Valentine's Day Operation</h1>
             <p>This was a project I made in middle school as a valentine's day gift, when I was first
@@ -45,7 +54,7 @@
                 the loop, the buzzer goes off. The whole system was then mounted to a box of candy hearts!
             </p>
         </router-link>
-        <router-link class="card sketchy" v-if="displayNum == 6" to="/disp/gal/cbarm">
+        <router-link class="card sketchy" v-if="displayNum == 7" to="/disp/gal/cbarm">
             <img :src="require('./../assets/cbarm-img.jpg')"/>
             <h1>Cardboard Arm Extension</h1>
             <p>This was my "capstone" project for my 8th grade creation lab. I designed and made it over
@@ -77,7 +86,7 @@
     }
     #card-list {
         width: 100%;
-        height: clamp(100px, 30vh, 400px);
+        height: clamp(100px, 25vh, 400px);
     }
     .card {
         width: clamp(200px, 100%, 1000px);

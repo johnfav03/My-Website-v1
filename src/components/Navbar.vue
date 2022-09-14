@@ -17,9 +17,9 @@
                 </ul>
                 <ul id="nav-list" :style="{ display: this.elemDisp, left: this.elemLeft, transition: this.trans }">
                     <li><router-link to="/">About Me</router-link></li>
-                    <li><router-link to="/projects/0/1">Web Projects</router-link></li>
-                    <li><router-link to="/projects/2/3">Arduino Projects</router-link></li>
-                    <li><router-link to="/projects/4/5">Older Projects</router-link></li>
+                    <li><router-link to="/projects/0/2">Web Projects</router-link></li>
+                    <li><router-link to="/projects/3/4">Arduino Projects</router-link></li>
+                    <li><router-link to="/projects/5/6">Older Projects</router-link></li>
                 </ul>
             </div>
         </div>

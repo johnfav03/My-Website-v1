@@ -33,6 +33,11 @@ export default new Router({
       path: '/disp/gal/:elem',
       name: 'GalDisplay',
       component: GalDisplay
+    },
+    {
+      path: '/dropzone',
+      beforeEnter() {location.href = 'https://johnfav03.pythonanywhere.com'},
+			component: HomePage
     }
   ]
 })
