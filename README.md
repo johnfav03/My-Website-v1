@@ -1,6 +1,6 @@
 # personal-website
 
-> A portfolio for me
+> This is the first version of my personal website, made with Vue to learn the technologies and display a basic portfolio for myself. In the future, I expect v2 to be made with React, so stay posted!
 
 ## Build Setup
 
